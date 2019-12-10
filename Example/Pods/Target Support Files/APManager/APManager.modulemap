@@ -1,0 +1,6 @@
+framework module APManager {
+  umbrella header "APManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

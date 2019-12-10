@@ -1,0 +1,6 @@
+framework module Pods_APManager_Tests {
+  umbrella header "Pods-APManager_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
