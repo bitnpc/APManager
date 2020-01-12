@@ -45,11 +45,11 @@ public class FPSMonitor: NSObject {
     
     public func startMonitor() -> Void {
         self.stopMonitor()
-        self.displayLink.add(to: RunLoop.main, forMode: RunLoopMode.commonModes)
+        self.displayLink.add(to: RunLoop.main, forMode: RunLoop.Mode.common)
     }
     
     public func stopMonitor() -> Void {
-        self.displayLink.remove(from: RunLoop.main, forMode: RunLoopMode.commonModes)
+        self.displayLink.remove(from: RunLoop.main, forMode: RunLoop.Mode.common)
     }
     
     // 最后一次计算 fps 的起始时间

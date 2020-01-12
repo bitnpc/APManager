@@ -1,22 +1,24 @@
 {
   "name": "APManager",
   "version": "0.1.0",
-  "summary": "A short description of APManager.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Tong Chao/APManager",
+  "summary": "Application Performance Monitor manager",
+  "description": "Application Performance Monitor manager, including FPS, stuck, Memory, Network",
+  "homepage": "https://github.com/bitnpc/APManager",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Tong Chao": "tongchao1@xiaomi.com"
+    "Tong Chao": "bitnpc@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Tong Chao/APManager.git",
+    "git": "https://github.com/bitnpc/APManager.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "APManager/Classes/**/*"
+  "source_files": "APManager/Classes/**/*",
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
 }

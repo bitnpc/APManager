@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'APManager'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of APManager.'
+  s.summary          = 'Application Performance Monitor manager'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,19 +18,20 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Application Performance Monitor manager, including FPS, stuck, Memory, Network
                        DESC
 
-  s.homepage         = 'https://github.com/Tong Chao/APManager'
+  s.homepage         = 'https://github.com/bitnpc/APManager'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Tong Chao' => 'bitnpc@gmail.com' }
-  s.source           = { :git => 'https://github.com/Tong Chao/APManager.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/bitnpc/APManager.git', :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/bitnpc'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'APManager/Classes/**/*'
+  s.swift_versions = '5.0'
   
   # s.resource_bundles = {
   #   'APManager' => ['APManager/Assets/*.png']
