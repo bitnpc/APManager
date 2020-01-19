@@ -1,22 +1,21 @@
-
 //
 //  FPSMonitor.swift
-//  miapm
+//  APManager
 //
-//  Created by Tong Chao on 12/10/2019.
-//  Copyright (c) 2019 Tong Chao. All rights reserved.
+//  Created by Tony on 12/12/2019.
+//  Copyright (c) 2019 Tony. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 // FPSMonitor 协议，实现此方法获取 fps 更新通知
-public protocol FPSMonitorDelegate: NSObjectProtocol {
+@objc public protocol FPSMonitorDelegate: NSObjectProtocol {
     func fpsMonitor(_ monitor: FPSMonitor, didUpdate fps: Int) -> Void
 }
 
 public class FPSMonitor: NSObject {
     
-    public weak var delegate: FPSMonitorDelegate?
+    @objc public weak var delegate: FPSMonitorDelegate?
     
     // 防止循环引用，添加弱引用
     internal class DisplayLinkProxy: NSObject {
@@ -43,13 +42,23 @@ public class FPSMonitor: NSObject {
         self.displayLink.invalidate()
     }
     
-    public func startMonitor() -> Void {
-        self.stopMonitor()
+    private var runloop: RunLoop?
+    private var mode: RunLoop.Mode?
+    
+    @objc public func start() -> Void {
+        self.stop()
+        self.runloop = RunLoop.main
+        self.mode = RunLoop.Mode.common
         self.displayLink.add(to: RunLoop.main, forMode: RunLoop.Mode.common)
     }
     
-    public func stopMonitor() -> Void {
-        self.displayLink.remove(from: RunLoop.main, forMode: RunLoop.Mode.common)
+    @objc public func stop() -> Void {
+        guard let runloop = self.runloop, let mode = self.mode else {
+            return
+        }
+        self.displayLink.remove(from: runloop, forMode: mode)
+        self.runloop = nil
+        self.mode = nil
     }
     
     // 最后一次计算 fps 的起始时间
@@ -72,8 +81,9 @@ public class FPSMonitor: NSObject {
         let currentTime = CFAbsoluteTimeGetCurrent()
         let timeInterval = currentTime - lastTime
         
-        if timeInterval - lastTime >= monitorInterval {
+        if timeInterval >= monitorInterval {
             let fps = Int(round(Double(self.cnt) / timeInterval))
+            debugPrint("fps: \(fps)")
             self.delegate?.fpsMonitor(self, didUpdate: fps)
             self.lastTime = 0.0
             self.cnt = 0

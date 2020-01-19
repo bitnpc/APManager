@@ -1,27 +1,18 @@
 PODS:
-  - APManager (0.1.0)
-  - Nimble (7.3.4)
-  - Quick (1.2.0)
+  - APManager (0.2.8):
+    - APManager/Network (= 0.2.8)
+  - APManager/Network (0.2.8)
 
 DEPENDENCIES:
   - APManager (from `../`)
-  - Nimble (~> 7.0)
-  - Quick (~> 1.2.0)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Nimble
-    - Quick
 
 EXTERNAL SOURCES:
   APManager:
     :path: "../"
 
 SPEC CHECKSUMS:
-  APManager: 82ad77d28f9e1f106a30678a1f103427d741cf9b
-  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  APManager: a35d7878607d3a3b333ed40c69497a0cdd7f38c9
 
-PODFILE CHECKSUM: 09a1a12f6b184eebef09a16b367fdfde23803e8e
+PODFILE CHECKSUM: a273c31c00a3f4296d6a54b0de8416dbac4addf8
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4

@@ -1,11 +1,9 @@
 # APManager
 
-[![CI Status](https://img.shields.io/travis/Tong Chao/APManager.svg?style=flat)](https://travis-ci.org/Tong Chao/APManager)
+[![CI Status](https://img.shields.io/travis/Tony/APManager.svg?style=flat)](https://travis-ci.org/Tony/APManager)
 [![Version](https://img.shields.io/cocoapods/v/APManager.svg?style=flat)](https://cocoapods.org/pods/APManager)
 [![License](https://img.shields.io/cocoapods/l/APManager.svg?style=flat)](https://cocoapods.org/pods/APManager)
 [![Platform](https://img.shields.io/cocoapods/p/APManager.svg?style=flat)](https://cocoapods.org/pods/APManager)
-
-Application Performance Monitor manager, including FPS, stuck, Memory, Network
 
 ## Example
 
@@ -24,7 +22,7 @@ pod 'APManager'
 
 ## Author
 
-Tong Chao, bitnpc@gmail.com
+Tony, bitnpc@gmail.com
 
 ## License
 

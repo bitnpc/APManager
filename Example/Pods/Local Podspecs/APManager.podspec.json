@@ -18,7 +18,13 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "APManager/Classes/**/*",
+  "source_files": "APManager/Classes/*.swift",
   "swift_versions": "5.0",
+  "subspecs": [
+    {
+      "name": "Network",
+      "source_files": "APManager/Classes/Network/*.swift"
+    }
+  ],
   "swift_version": "5.0"
 }

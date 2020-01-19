@@ -2,20 +2,22 @@
 //  AppDelegate.swift
 //  APManager
 //
-//  Created by Tong Chao on 12/10/2019.
-//  Copyright (c) 2019 Tong Chao. All rights reserved.
+//  Created by Tony on 12/12/2019.
+//  Copyright (c) 2019 Tony. All rights reserved.
 //
 
 import UIKit
+import APManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        NetworkMonitor.bootstrap()
+        NetworkMonitor.sharedInstance.start()
         return true
     }
 
