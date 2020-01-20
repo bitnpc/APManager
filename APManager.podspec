@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 Application Performance Monitor manager, including FPS, stuck, Memory, Network
                        DESC
 
-  s.homepage         = 'https://github.com/bitnpc/APManager.git'
+  s.homepage         = 'https://github.com/bitnpc/APManager'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Tony' => 'bitnpc@gmail.com' }
